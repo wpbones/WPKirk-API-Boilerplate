@@ -1,7 +1,7 @@
 {
   "name": "wpbones/wpkirk",
   "type": "wordpress-plugin",
-  "description": "A WP Bones template WordPress plugin",
+  "description": "A WP Bones Boilerplate WordPress plugin",
   "keywords": [
     "wordpress"
   ],
@@ -10,8 +10,8 @@
   "authors": [
     {
       "name": "Giovambattista Fazioli",
-      "email": "giovambattista.fazioli@gmail.com",
-      "homepage": "http://undolog.com"
+      "email": "wpbones.info@gmail.com",
+      "homepage": "https://wpbones.vercel.app/"
     }
   ],
   "support": {
@@ -20,7 +20,7 @@
   },
   "require": {
     "php": ">=7.4",
-    "wpbones/wpbones": "dev-master"
+    "wpbones/wpbones": "dev-dev"
   },
   "autoload": {
     "psr-4": {
