@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: WP Kirk Boilerplate
+ * Plugin Name: WP Kirk API Boilerplate
  * Plugin URI: https://github.com/wpbones/WPKirk
  * Description: WP Bones Boilerplate WordPress plugin
  * Version: 1.6.0
@@ -17,7 +17,7 @@
  */
 
 if (!defined('ABSPATH')) {
-    exit();
+  exit();
 }
 
 /*
