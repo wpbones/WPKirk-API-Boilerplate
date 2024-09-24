@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfb4ab0ed239c9d4acc7597b4d4094af",
+    "content-hash": "2c5904f3fd9e4ecf4c0a8e75e766c749",
     "packages": [
         {
             "name": "eftec/bladeone",
@@ -67,16 +67,16 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "dev-dev",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "d8fa5a0bd5379ab59298c2bf84bbdd0f05c8c278"
+                "reference": "078a3efef373ecc3d44456d12f2b72f470e76504"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/d8fa5a0bd5379ab59298c2bf84bbdd0f05c8c278",
-                "reference": "d8fa5a0bd5379ab59298c2bf84bbdd0f05c8c278",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/078a3efef373ecc3d44456d12f2b72f470e76504",
+                "reference": "078a3efef373ecc3d44456d12f2b72f470e76504",
                 "shasum": ""
             },
             "require": {
@@ -117,15 +117,13 @@
                 "issues": "https://github.com/wpbones/WPBones/issues",
                 "source": "https://github.com/wpbones/WPBones/"
             },
-            "time": "2024-09-23T10:17:48+00:00"
+            "time": "2024-09-24T09:12:22+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wpbones/wpbones": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
