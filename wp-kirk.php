@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: WP Kirk API Boilerplate
- * Plugin URI: https://github.com/wpbones/WPKirk
+ * Plugin URI: https://github.com/wpbones/WPKirk-API-Boilerplate
  * Description: WP Bones Boilerplate WordPress plugin
  * Version: 1.6.0
  * Requires at least: 6.2
