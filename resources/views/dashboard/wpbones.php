@@ -7,25 +7,20 @@
  |
 -->
 
-<div class="wp-kirk wrap">
-  <h1><?php echo $plugin->Name; ?> main view</h1>
-  <h3>PHP Version <?php echo phpversion(); ?></h3>
+<?php ob_start() ?>
 
-  <h2>Path</h2>
-  <code>wp-content/plugins/WPKirk-API-Boilerplate/api/wpbones/v2/route.php</code>
+<div class="wp-kirk wrap wp-kirk-sampl">
 
-  <h2>Route</h2>
+  <div class="wp-kirk-toc-content">
 
-  <pre>
-    Route::get('/info', function () {
-        return Route::response(["tag" => "v1.0.0"]);
-    });
-  </pre>
+    <?php wpkirk_section(__('Folders and versions', 'wp-kirk')); ?>
+    <?php wpkirk_code("@/api/wpbones/v2/route.php"); ?>
 
-  <h2>Test</h2>
+    <?php wpkirk_code("/wp-json/wpbones/v2/info"); ?>
+    <iframe style="width: 100%;border-radius: 8px;margin: 8px 0" src="/wp-json/wpbones/v2/info" frameborder="0"></iframe>
 
-  <code>/wp-json/wpbones/v2/example</code>
-  <iframe style="width: 100%;border-radius: 8px;margin: 8px 0" src="/wp-json/wpbones/v2/info" frameborder="0"></iframe>
+  </div>
 
+  <?php wpkirk_toc('Hooks') ?>
 
 </div>
