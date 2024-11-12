@@ -20,6 +20,8 @@
         <?php _e('Complete Documentation', 'wp-kirk'); ?> ↗</a>
     </p>
 
+    <p><?php _e('Here is an example of a different route', 'wp-kirk'); ?></p>
+
     <?php wpkirk_code("@/api/wpbones/v2/route.php"); ?>
 
     <?php wpkirk_code("/wp-json/wpbones/v2/info"); ?>
@@ -27,6 +29,6 @@
 
   </div>
 
-  <?php wpkirk_toc('Hooks') ?>
+  <?php wpkirk_toc('API') ?>
 
 </div>
