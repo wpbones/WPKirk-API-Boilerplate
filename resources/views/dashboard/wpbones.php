@@ -14,6 +14,12 @@
   <div class="wp-kirk-toc-content">
 
     <?php wpkirk_section(__('Folders and versions', 'wp-kirk')); ?>
+
+    <p align="center">
+      <a href="https://www.wpbones.com/docs/ServicesProvider/rest-api" class="button button-primary button-hero" target="_blank">
+        <?php _e('Complete Documentation', 'wp-kirk'); ?> ↗</a>
+    </p>
+
     <?php wpkirk_code("@/api/wpbones/v2/route.php"); ?>
 
     <?php wpkirk_code("/wp-json/wpbones/v2/info"); ?>

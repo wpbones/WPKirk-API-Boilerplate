@@ -15,6 +15,11 @@
 
     <?php wpkirk_section(__('Overview', 'wp-kirk')); ?>
 
+    <p align="center">
+      <a href="https://www.wpbones.com/docs/ServicesProvider/rest-api" class="button button-primary button-hero" target="_blank">
+        <?php _e('Complete Documentation', 'wp-kirk'); ?> ↗</a>
+    </p>
+
     <p>
       <?php _e('The routes are defined in', 'wp-kirk'); ?>
     </p>
@@ -117,6 +122,14 @@ Route::get('/example_args', function (WP_REST_Request \$request) {
 
     <p><?php _e('Test the route passing the parameter', 'wp-kirk'); ?></p>
 
+    <?php wpkirk_code(
+      htmlentities('<form method="GET" action="/wp-json/wpkirk/v1/example_args">
+  <input type="hidden" name="hello" value="world">
+  <button class="button" type="submit">Submit</button>
+</form>'),
+      ['language' => 'html']
+    ); ?>
+
     <form method="GET" action="/wp-json/wpkirk/v1/example_args">
       <input type="hidden" name="hello" value="world">
       <button class="button" type="submit">Submit</button>
@@ -124,6 +137,6 @@ Route::get('/example_args', function (WP_REST_Request \$request) {
 
   </div>
 
-  <?php wpkirk_toc('Hooks') ?>
+  <?php wpkirk_toc('API') ?>
 
 </div>
