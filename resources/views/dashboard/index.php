@@ -78,6 +78,8 @@ Route::get('/error', function () {
     <?php wpkirk_code("// may use the same route for different methods
 Route::get('/version', '\WPKirk\API\WPKirkV1Controller@version');"); ?>
 
+    <?php wpkirk_code("@/plugin/API/WPKirkV1Controller.php"); ?>
+
     <?php wpkirk_code("/wp-json/wpkirk/v1/version"); ?>
     <iframe style="width: 100%;border-radius: 8px;margin: 8px 0" src="/wp-json/wpkirk/v1/version" frameborder="0"></iframe>
 
@@ -85,7 +87,7 @@ Route::get('/version', '\WPKirk\API\WPKirkV1Controller@version');"); ?>
 
     <?php wpkirk_code("// very simple example with args
 Route::get('/example_args', function (WP_REST_Request \$request) {
-  \$value = var_export($request, true);
+  \$value = var_export(\$request, true);
 
   \$param = \$request->get_param( 'hello' );
 

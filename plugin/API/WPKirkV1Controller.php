@@ -13,7 +13,7 @@ use WPKirk\WPBones\Routing\API\RestController;
 
 class WPKirkV1Controller extends RestController
 {
-  public function version(): WP_Error|WP_REST_Response
+  public function version(): WP_Error
   {
     if (current_user_can('edit_posts')) {
       return $this->response(['version' => '1.0.0']);
