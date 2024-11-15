@@ -12,11 +12,19 @@ class DashboardController extends Controller
 {
   public function index()
   {
-    return WPKirk()->view('dashboard.index');
+    return WPKirk()
+    ->view('dashboard.index')
+    ->withAdminStyle('prism')
+    ->withAdminScript('prism')
+    ->withAdminStyle('wp-kirk-common');
   }
 
   public function wpbones()
   {
-    return WPKirk()->view('dashboard.wpbones');
+    return WPKirk()
+    ->view('dashboard.wpbones')
+    ->withAdminStyle('prism')
+    ->withAdminScript('prism')
+    ->withAdminStyle('wp-kirk-common');
   }
 }
