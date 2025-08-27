@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('ABSPATH')) {
-    exit();
+  exit();
 }
 
 /*
@@ -15,20 +15,20 @@ if (!defined('ABSPATH')) {
 
 return [
 
-    // embed wp-json-server
-    'wp' => [
-        'require_authentication' => false, // will affect all routes.
-    ],
+  // embed wp-json-server
+  'wp' => [
+    'require_authentication' => false, // will affect all routes.
+  ],
 
-    // your custom rest api
-    'custom' => [
-        'path' => '/api',
-        'enabled' => true,
-    ],
+  // your custom rest api
+  'custom' => [
+    'path' => '/api',
+    'enabled' => true,
+  ],
 
-    // authentication
-    'auth' => [
-        // embed basic authentication handler
-        'basic' => true
-    ]
+  // authentication
+  'auth' => [
+    // embed basic authentication handler
+    'basic' => false
+  ]
 ];
