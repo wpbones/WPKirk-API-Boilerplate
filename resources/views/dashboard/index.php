@@ -31,7 +31,7 @@
     <?php wpkirk_code("// very simple example
 Route::get('/example', function () {
   return 'Hello World!';
-});"); ?>
+}, ['permission_callback' => '__return_true']);"); ?>
 
     <?php wpkirk_code("/wp-json/wpkirk/v1/example"); ?>
     <iframe style="width: 100%;border-radius: 8px;margin: 8px 0" src="/wp-json/wpkirk/v1/example" frameborder="0"></iframe>
@@ -41,7 +41,7 @@ Route::get('/example', function () {
     <?php wpkirk_code("// json response
 Route::get('/example_json', function () {
   wp_send_json(['tag' => 'v1.0.0']);
-});"); ?>
+}, ['permission_callback' => '__return_true']);"); ?>
 
     <?php wpkirk_code("/wp-json/wpkirk/v1/example_json"); ?>
     <iframe style="width: 100%;border-radius: 8px;margin: 8px 0" src="/wp-json/wpkirk/v1/example_json" frameborder="0"></iframe>
@@ -51,7 +51,7 @@ Route::get('/example_json', function () {
     <?php wpkirk_code("// right way to use a simple response
 Route::get('/example_response', function () {
   return Route::response(['tag' => 'v1.0.0']);
-});"); ?>
+}, ['permission_callback' => '__return_true']);"); ?>
 
     <?php wpkirk_code("/wp-json/wpkirk/v1/example_response"); ?>
     <iframe style="width: 100%;border-radius: 8px;margin: 8px 0" src="/wp-json/wpkirk/v1/example_response" frameborder="0"></iframe>
@@ -60,7 +60,7 @@ Route::get('/example_response', function () {
 
     <?php wpkirk_code("Route::get('/invalid', function () {
   return new WP_Error('no_author', 'Invalid author', ['status' => 404]);
-});"); ?>
+}, ['permission_callback' => '__return_true']);"); ?>
 
     <?php wpkirk_code("/wp-json/wpkirk/v1/invalid"); ?>
     <iframe style="width: 100%;border-radius: 8px;margin: 8px 0" src="/wp-json/wpkirk/v1/invalid" frameborder="0"></iframe>
@@ -68,7 +68,7 @@ Route::get('/example_response', function () {
     <?php wpkirk_code("// right way to use an error response
 Route::get('/error', function () {
   return Route::responseError('no_author', 'Invalid author', ['status' => 404]);
-});"); ?>
+}, ['permission_callback' => '__return_true']);"); ?>
 
     <?php wpkirk_code("/wp-json/wpkirk/v1/error"); ?>
     <iframe style="width: 100%;border-radius: 8px;margin: 8px 0" src="/wp-json/wpkirk/v1/error" frameborder="0"></iframe>
@@ -76,7 +76,7 @@ Route::get('/error', function () {
     <?php wpkirk_section(__('Controller methods', 'wp-kirk')); ?>
 
     <?php wpkirk_code("// may use the same route for different methods
-Route::get('/version', '\WPKirk\API\WPKirkV1Controller@version');"); ?>
+Route::get('/version', '\WPKirk\API\WPKirkV1Controller@version', ['permission_callback' => '__return_true']);"); ?>
 
     <?php wpkirk_code("@/plugin/API/WPKirkV1Controller.php"); ?>
 
@@ -119,7 +119,7 @@ Route::get('/example_args', function (WP_REST_Request \$request) {
       'ROUTE'   => \$request->get_route(),
     ]
   );
-});
+}, ['permission_callback' => '__return_true']);
 "); ?>
 
     <p><?php _e('Test the route passing the parameter', 'wp-kirk'); ?></p>
